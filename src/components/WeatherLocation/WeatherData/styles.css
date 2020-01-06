@@ -1,0 +1,31 @@
+.weatherDataComponent {
+  background-color: rgba(200, 200, 200, 0.5);
+  width: 400px;
+  height: 100px;
+  line-height: 100px;
+  margin: 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.weatherExtraInfoComponent {
+  background-color: red;
+  width: 50%;
+}
+.weatherTemperatureComponent {
+  background-color: yellow;
+  width: 50%;
+}
+.temperature {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+.temperatureType {
+  color: #666;
+  font-weight: bold;
+}

@@ -1,0 +1,16 @@
+* {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.locationComponent {
+    width: 100%;
+    height: 25px;
+    text-align: left;
+    padding-left: 10px;
+    color: #888;
+}
+
+.weatherLocationComponent {
+    width: 400px;
+    padding: 15px;
+}

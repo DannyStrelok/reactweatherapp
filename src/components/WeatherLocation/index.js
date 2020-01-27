@@ -12,7 +12,7 @@ class WeatherLocation extends Component  {
 
     constructor(props) {
         super(props);
-        const { city } = props;
+        const { city, onWeatherLocationClick } = props;
         this.state = {
             city,
             data: null,
@@ -42,7 +42,7 @@ class WeatherLocation extends Component  {
             return resolve.json();
         })
         .then( data => {
-            console.log('RESULTADO AJAX');
+            //console.log('RESULTADO AJAX');
             //console.log(data);
             const newWeather = transformWeather(data);
             //console.log(newWeather);
@@ -65,7 +65,7 @@ class WeatherLocation extends Component  {
         //     console.log(err);
         // } );
 
-        console.log('actualizado');
+        //console.log('actualizado');
         // this.setState({
         //     city: 'BCN',
         //     //data: data
@@ -73,7 +73,7 @@ class WeatherLocation extends Component  {
     }
 
     render() {
-        console.log('RENDER')
+        //console.log('RENDER')
         const { onWeatherLocationClick } = this.props;
         const { city, data } = this.state;
 
@@ -81,7 +81,8 @@ class WeatherLocation extends Component  {
             <div className="weatherLocationComponent" onClick={onWeatherLocationClick} >
                 <Location city={city}></Location>
                 {data ? 
-                    <WeatherData data={data}></WeatherData> : 
+                    <WeatherData data={data}></WeatherData> 
+                    : 
                     <CircularProgress />
                 }
             </div>

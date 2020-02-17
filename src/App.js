@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Paper from '@material-ui/core/Paper';
 import AppBar from '@material-ui/core/AppBar';
@@ -77,9 +78,16 @@ class App extends Component {
   
 }
 
+App.propTypes = {
+  setCity: PropTypes.func.isRequired,
+}
+
+const mapStateToProps = (state) => {
+  
+}
+
 const mapDispatchToPropsActions = dispatch => ({
   setCity: value => dispatch(setCity(value))
 });
-const AppConected = connect(null, mapDispatchToPropsActions)(App);
 
-export default AppConected;
+export default connect(mapStateToProps, mapDispatchToPropsActions)(App);
